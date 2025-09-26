@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: cms-project
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: database__client
+        value: postgres
+      - key: database__connection
+        value: ${DATABASE_URL}
+      - key: url
+        value: https://cms-project.onrender.com
