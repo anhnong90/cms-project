@@ -5,11 +5,14 @@ services:
     image: ghost:6-alpine
     ports:
       - "2368:2368"
+    env_file:
+      - .env
     environment:
-      url: http://localhost:2368
-      database__client: sqlite3
-      database__connection__filename: /var/lib/ghost/content/data/ghost-local.db
-    volumes:
-      - ./content:/var/lib/ghost/content
+      - database__client=${database__client}
+      - database__connection__host=${database__connection__host}
+      - database__connection__user=${database__connection__user}
+      - database__connection__password=${database__connection__password}
+      - database__connection__database=${database__connection__database}
+      - database__connection__port=${database__connection__port}
+      - url=${url}
     restart: unless-stopped
-
