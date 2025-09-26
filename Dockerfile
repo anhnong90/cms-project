@@ -11,7 +11,7 @@ ENV database__client=sqlite3
 ENV database__connection__filename=/var/lib/ghost/content/data/ghost-local.db
 
 # Set the site URL (replace with your Render domain)
-ENV url=https://cms-project.onrender.com
+ENV url=https://cms-project-1.onrender.com
 
 # Expose the Ghost port
 EXPOSE 2368
