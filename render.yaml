@@ -1,15 +1,11 @@
-version: '3.1'
-
 services:
-  ghost:
-    image: ghost:6-alpine
-    ports:
-      - "2368:2368"
-    environment:
-      url: http://localhost:2368
-      database__client: sqlite3
-      database__connection__filename: /var/lib/ghost/content/data/ghost-local.db
-    volumes:
-      - ./content:/var/lib/ghost/content
-    restart: unless-stopped
-
+  - type: web
+    name: cms-project
+    env: docker
+    plan: free
+    branch: main
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: url
+        value: https://cms-project.onrender.com
