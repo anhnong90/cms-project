@@ -3,9 +3,11 @@ services:
     name: cms-project
     env: docker
     plan: free
-    branch: main
-    region: frankfurt
     dockerfilePath: ./Dockerfile
     envVars:
+      - key: database__client
+        value: postgres
+      - key: database__connection
+        value: ${DATABASE_URL}
       - key: url
         value: https://cms-project.onrender.com
