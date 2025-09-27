@@ -41,17 +41,9 @@ So entstand Ghost: schnell, offen, elegant.
                                      +------------------+
 
 ```
----
-
-# Mein Erstes Unternehmen – Ghost CMS Projekt
-
-Dieses Projekt ist eine **CMS-Webseite mit Ghost**, die Informationen für Gründer:innen bereitstellt  
-(z. B. Unternehmensformen, Businessplan, Finanzierung).
 
 ---
 # Installations- und Deployment-Optionen
-
----
 
 ## 1️⃣ Ghost CLI Setup (ohne Docker)
 
@@ -333,11 +325,6 @@ Thus, Ghost was born: fast, open, and elegant.
 
 ```
 ---
-import pypandoc
-
-text = """# My First Startup – Ghost CMS Project
-
-This project is a Ghost-powered CMS website that provides information for aspiring entrepreneurs (e.g. business structures, business plans, funding).
 
 # Installation & Deployment Options
 
