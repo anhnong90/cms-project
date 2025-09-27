@@ -1,6 +1,6 @@
 <p align="right">🇬🇧 <em>English version below</em></p>
 
-# 👻 Mein Erstes Ghost CMS Projekt
+# 👻 Unser erstes Ghost CMS Projekt
 
 > **Slogan:**  
 > **_„Wir haben keine Angst vor Ghost – wir haben ihn selbst gehostet!!!“_**
@@ -283,7 +283,7 @@ Dank dieser Dokumentation war die Arbeit mit Ghost wesentlich einfacher und übe
 ---
 
 
-# 👻 My First Ghost CMS Project
+# 👻 Our First Ghost CMS Project
 
 > **Slogan:**  
 > **_“We’re not afraid of Ghost — we hosted it ourselves!”_**
