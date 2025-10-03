@@ -1,6 +1,19 @@
 version: '3.1'
 
 services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: ghost_db
+      MYSQL_USER: ghost
+      MYSQL_PASSWORD: ghostpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
   ghost:
     build:
       context: .
@@ -8,9 +21,16 @@ services:
     ports:
       - "2368:2368"
     environment:
-      url: http://192.168.254.142:2368
-      database__client: sqlite3
-      database__connection__filename: /var/lib/ghost/content/data/ghost-local.db
+      database__client: mysql
+      database__connection__host: mysql
+      database__connection__user: ghost
+      database__connection__password: ghostpass
+      database__connection__database: ghost_db
+      url: http://localhost:2368
+    depends_on:
+      - mysql
     volumes:
       - ./content:/var/lib/ghost/content
-    restart: unless-stopped
+
+volumes:
+  mysql_data:

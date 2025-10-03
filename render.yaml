@@ -6,8 +6,16 @@ services:
     dockerfilePath: ./Dockerfile
     envVars:
       - key: database__client
-        value: postgres
-      - key: database__connection
-        value: ${DATABASE_URL}
+        value: mysql
+      - key: database__connection__host
+        value: your-public-ip-or-ngrok-url
+      - key: database__connection__user
+        value: ghost
+      - key: database__connection__password
+        value: ghostpass
+      - key: database__connection__database
+        value: ghost_db
+      - key: security__staffDeviceVerification
+        value: false
       - key: url
         value: https://cms-project-1.onrender.com
